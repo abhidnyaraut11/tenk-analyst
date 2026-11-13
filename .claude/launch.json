@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "backend",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "python", "-m", "uvicorn", "backend.api:app", "--port", "8000"],
+      "port": 8000
+    },
+    {
+      "name": "frontend",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "python", "-m", "streamlit", "run", "frontend/app.py",
+                      "--server.port", "8501", "--server.headless", "true"],
+      "port": 8501
+    }
+  ]
+}
